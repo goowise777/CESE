@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="298.02744"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="LS Logo collorized 01.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6609209"
+     inkscape:cx="150"
+     inkscape:cy="149.01372"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1024"
+     inkscape:window-height="749"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-424.28571,-534.77706)">
+    <g
+       transform="matrix(1.7533811,0,0,-1.7533811,184.48279,1869.6559)"
+       inkscape:label="ink_ext_XXXXXX"
+       id="g2826">
+      <g
+         transform="scale(0.1,0.1)"
+         id="g2828">
+        <path
+           id="path2830"
+           style="fill:#fff200;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m 1368.74,6086.9 1540.18,0 0,1525.19 -1540.18,0 0,-1525.19 z" />
+        <path
+           id="path2832"
+           style="fill:none;stroke:#fff200;stroke-width:2.16000009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:22.92560005;stroke-opacity:1;stroke-dasharray:none"
+           d="m 1368.74,6086.9 1540.18,0 0,1525.19 -1540.18,0 0,-1525.19 z" />
+        <path
+           id="path2834"
+           style="fill:#0303fa;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m 1537.38,5914.52 1540.18,0 0,1525.2 -1540.18,0 0,-1525.2 z" />
+        <path
+           id="path2836"
+           style="fill:none;stroke:#00adef;stroke-width:2.16000009;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:22.92560005;stroke-opacity:1;stroke-dasharray:none"
+           d="m 1537.38,5914.52 1540.18,0 0,1525.2 -1540.18,0 0,-1525.2 z" />
+        <path
+           id="path2838"
+           style="fill:#fff200;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m 1822.18,7286.07 209.85,0 0,-936.26 c -1.32,-30.48 20.77,-37.55 49.42,-38.07 l 160.44,0 0,-213.6 -224.14,0 c -143.12,7.7 -199.14,74.94 -195.57,182.92 l 0,1005.01" />
+        <path
+           id="path2840"
+           style="fill:#fff200;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           d="m 2485.3,7277.43 313.88,0 0,-220.23 -286.04,0 c -121.12,-1.6 -140.82,-182.09 -46,-217.82 271.24,-102.18 393.11,-191.22 387.17,-378.47 -0.9,-248.14 -145.19,-368.34 -321.26,-367.23 l -255.32,1.62 0,217.69 265.79,0 c 92.51,38.43 124.69,104.28 68.7,210.2 -66.64,46.35 -140.43,73.21 -237.32,114.64 -119.52,51.12 -186.7,177.35 -185.09,295.64 7.37,192.28 105.86,306.94 295.49,343.96" />
+      </g>
+    </g>
+  </g>
+</svg>
