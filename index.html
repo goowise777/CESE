@@ -924,26 +924,14 @@
 
             <!-- Technical Map placeholder -->
             <div class="technical-map" aria-label="Location coordinates map">
-              <svg class="map-grid-svg" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <pattern id="gridPattern" width="15" height="15" patternUnits="userSpaceOnUse">
-                  <path d="M 15 0 L 0 0 0 15" fill="none" stroke="var(--color-surface-card)" stroke-width="0.7" />
-                </pattern>
-                <rect width="100%" height="100%" fill="url(#gridPattern)" />
-
-                <!-- Schematic Coordinates lines -->
-                <line x1="150" y1="0" x2="150" y2="150" stroke="var(--color-text-muted)" stroke-width="0.5"
-                  stroke-dasharray="2 2" opacity="0.4" />
-                <line x1="0" y1="75" x2="300" y2="75" stroke="var(--color-text-muted)" stroke-width="0.5"
-                  stroke-dasharray="2 2" opacity="0.4" />
-
-                <!-- Target locator radar -->
-                <circle cx="150" cy="75" r="18" stroke="var(--color-accent)" stroke-width="1.5" class="map-radar" />
-                <circle cx="150" cy="75" r="3" fill="var(--color-accent)" />
-
-                <text x="155" y="70" class="sld-text sld-text-mono" font-size="8">CESE RIYADH HQ</text>
-                <text x="10" y="140" class="sld-text sld-text-mono" font-size="7">LAT: 24.7136° N | LON: 46.7253°
-                  E</text>
-              </svg>
+              <iframe
+                src="https://maps.google.com/maps?q=AlSalam%20District,%20Riyadh,%20Saudi%20Arabia&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="220"
+                style="border:0; display:block; filter: invert(90%) hue-rotate(180deg) contrast(120%);"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
             </div>
           </div>
 
