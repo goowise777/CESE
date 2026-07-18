@@ -1231,10 +1231,12 @@ a {
   padding: 24px;
 }
 
-.about-circuit-svg {
+.about-showcase-img {
   width: 100%;
   height: auto;
-  max-width: 320px;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 /* ==========================================================================
