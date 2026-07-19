@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRfqForm();
   initCardMouseTracking();
   initProductShowcaseModal();
+  initPrivacyModal();
 });
 
 /* ==========================================================================
@@ -116,7 +117,20 @@ const translations = {
     form_error: "Verification failed. Please ensure all required fields are correctly formatted.",
     modal_specs_header: "Technical Specifications",
     modal_brands_header: "Sourced Brands",
-    modal_cta_btn: "Request Price Quotation"
+    modal_cta_btn: "Request Price Quotation",
+    privacy_title: "Privacy Policy",
+    privacy_p1: "This Privacy Policy governs the manner in which Commercial Electricity Supply Establishment (CESE) collects, uses, maintains, and discloses information collected from users (each, a \"User\") of the cese.in website.",
+    privacy_h1: "1. Information We Collect",
+    privacy_p2: "We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, fill out the Request for Quote (RFQ) form, and in connection with other activities, services, features, or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, company name, and phone number.",
+    privacy_h2: "2. How We Use Collected Information",
+    privacy_p3: "CESE collects and uses Users' personal information for the following purposes:",
+    privacy_p3_li1: "To process and respond to request for quotations (RFQs).",
+    privacy_p3_li2: "To improve customer service and support needs.",
+    privacy_p3_li3: "To send periodic emails regarding order status, technical updates, or engineering consultation.",
+    privacy_h3: "3. How We Protect Your Information",
+    privacy_p4: "We adopt appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, company name, and data stored on our Site.",
+    privacy_h4: "4. Sharing Personal Information",
+    privacy_p5: "We do not sell, trade, or rent Users' personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our trusted business partners, trusted affiliates, and advertisers for the purposes outlined above."
   },
   ar: {
     logo_title: "توريد الكهرباء",
@@ -217,7 +231,20 @@ const translations = {
     form_error: "فشل التحقق من صحة البيانات. يرجى التأكد من ملء جميع الحقول المطلوبة بشكل صحيح.",
     modal_specs_header: "المواصفات الفنية",
     modal_brands_header: "العلامات التجارية الموفرة",
-    modal_cta_btn: "طلب تسعيرة للمنتج"
+    modal_cta_btn: "طلب تسعيرة للمنتج",
+    privacy_title: "سياسة الخصوصية",
+    privacy_p1: "تحكم سياسة الخصوصية هذه الطريقة التي تجمع بها مؤسسة توريد الكهرباء التجارية (CESE) المعلومات التي يتم جمعها من المستخدمين وتستخدمها وتحافظ عليها وتفصح عنها لموقع cese.in.",
+    privacy_h1: "١. المعلومات التي نجمعها",
+    privacy_p2: "قد نجمع معلومات التعريف الشخصية من المستخدمين بطرق مختلفة، بما في ذلك، على سبيل المثال لا الحصر، عند زيارة موقعنا، وملء نموذج طلب التسعير (RFQ)، وبالارتباط بالأنشطة أو الخدمات أو الميزات أو الموارد الأخرى التي نوفرها على موقعنا. قد يُطلب من المستخدمين، حسب الاقتضاء، الاسم وعنوان البريد الإلكتروني واسم الشركة ورقم الهاتف.",
+    privacy_h2: "٢. كيف نستخدم المعلومات التي تم جمعها",
+    privacy_p3: "تجمع مؤسسة توريد الكهرباء التجارية (CESE) معلومات المستخدمين الشخصية وتستخدمها للأغراض التالية:",
+    privacy_p3_li1: "لمعالجة طلبات التسعير والاستجابة لها (RFQs).",
+    privacy_p3_li2: "لتحسين خدمة العملاء واحتياجات الدعم الفني.",
+    privacy_p3_li3: "لإرسال رسائل بريد إلكتروني دورية بشأن حالة الطلب أو التحديثات الفنية أو الاستشارات الهندسية.",
+    privacy_h3: "٣. كيف نحمي معلوماتك",
+    privacy_p4: "نعتمد ممارسات مناسبة لجمع البيانات وتخزينها ومعالجتها وتدابير أمنية لحماية معلوماتك الشخصية واسم شركتك والبيانات المخزنة على موقعنا من الوصول غير المصرح به أو التعديل أو الإفصاح أو الإتلاف.",
+    privacy_h4: "٤. مشاركة المعلومات الشخصية",
+    privacy_p5: "نحن لا نبيع أو نتاجر أو نؤجر معلومات التعريف الشخصية للمستخدمين للآخرين. قد نشارك معلومات ديموغرافية مجمعة عامة غير مرتبطة بأي معلومات تعريف شخصية تتعلق بالزوار والمستخدمين مع شركائنا التجاريين الموثوقين والشركات التابعة الموثوقة والمعلنين للأغراض الموضحة أعلاه."
   }
 };
 
@@ -1225,6 +1252,36 @@ function initProductShowcaseModal() {
       }
     });
   }
+}
+
+function initPrivacyModal() {
+  const modal = document.getElementById('privacy-modal');
+  const trigger = document.getElementById('privacy-link');
+  const closeBtn = document.getElementById('privacy-modal-close');
+  const backdrop = document.getElementById('privacy-modal-backdrop');
+
+  if (!modal || !trigger) return;
+
+  const openModal = (e) => {
+    e.preventDefault();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  trigger.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
 
 function openProductModal(name, category) {

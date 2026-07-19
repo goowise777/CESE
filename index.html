@@ -1005,7 +1005,7 @@
             <li><span class="lbl-light font-mono">NATIONAL UNIFIED REG NO:</span>7054647156</li>
             <li><span class="lbl-light font-mono">VAT:</span> 300055123400003</li>
             <li><a href="#contact" data-i18n="footer_terms">Terms of Supply</a></li>
-            <li><a href="#contact" data-i18n="footer_privacy">Privacy Policy</a></li>
+            <li><a href="#" id="privacy-link" data-i18n="footer_privacy">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -1072,6 +1072,38 @@
             <button class="btn btn-primary" id="product-modal-quote-btn" data-i18n="modal_cta_btn">Request price
               quotation</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div class="product-modal" id="privacy-modal" role="dialog" aria-hidden="true">
+    <div class="product-modal-backdrop" id="privacy-modal-backdrop"></div>
+    <div class="product-modal-content" style="max-width: 600px; padding: 40px;">
+      <button class="product-modal-close" id="privacy-modal-close" aria-label="Close modal">&times;</button>
+      <div class="privacy-modal-body">
+        <span class="mono-label">ESTABLISHMENT_COMPLIANCE</span>
+        <h2 class="product-modal-title" style="margin-bottom: 20px;" data-i18n="privacy_title">Privacy Policy</h2>
+        <div style="font-size: 14px; line-height: 1.6; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 16px; max-height: 400px; overflow-y: auto; padding-right: 10px;">
+          <p data-i18n="privacy_p1">This Privacy Policy governs the manner in which Commercial Electricity Supply Establishment (CESE) collects, uses, maintains, and discloses information collected from users (each, a "User") of the cese.in website.</p>
+          
+          <h4 style="color: var(--color-text); font-family: var(--font-mono); font-size: 12px; margin-top: 8px;" data-i18n="privacy_h1">1. Information We Collect</h4>
+          <p data-i18n="privacy_p2">We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, fill out the Request for Quote (RFQ) form, and in connection with other activities, services, features, or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, company name, and phone number.</p>
+          
+          <h4 style="color: var(--color-text); font-family: var(--font-mono); font-size: 12px; margin-top: 8px;" data-i18n="privacy_h2">2. How We Use Collected Information</h4>
+          <p data-i18n="privacy_p3">CESE collects and uses Users' personal information for the following purposes:</p>
+          <ul style="list-style-type: square; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <li data-i18n="privacy_p3_li1">To process and respond to request for quotations (RFQs).</li>
+            <li data-i18n="privacy_p3_li2">To improve customer service and support needs.</li>
+            <li data-i18n="privacy_p3_li3">To send periodic emails regarding order status, technical updates, or engineering consultation.</li>
+          </ul>
+          
+          <h4 style="color: var(--color-text); font-family: var(--font-mono); font-size: 12px; margin-top: 8px;" data-i18n="privacy_h3">3. How We Protect Your Information</h4>
+          <p data-i18n="privacy_p4">We adopt appropriate data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, company name, and data stored on our Site.</p>
+          
+          <h4 style="color: var(--color-text); font-family: var(--font-mono); font-size: 12px; margin-top: 8px;" data-i18n="privacy_h4">4. Sharing Personal Information</h4>
+          <p data-i18n="privacy_p5">We do not sell, trade, or rent Users' personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our trusted business partners, trusted affiliates, and advertisers for the purposes outlined above.</p>
         </div>
       </div>
     </div>
