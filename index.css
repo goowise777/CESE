@@ -2094,3 +2094,16 @@ a {
 .category-card:hover .card-category-img {
   transform: scale(1.05);
 }
+
+/* Mobile adjustments for About section image */
+@media (max-width: 600px) {
+  .about-graphics-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  .about-showcase-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
