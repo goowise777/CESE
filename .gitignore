@@ -1,6 +1,3 @@
-# Private configuration files (never commit keys to GitHub)
-config.js
-
 # Environment files
 .env
 .env.local
