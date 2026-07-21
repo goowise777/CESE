@@ -222,7 +222,7 @@ a {
 }
 
 .logo-img {
-  height: 52px;
+  height: 58px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -240,7 +240,7 @@ a {
 }
 
 .header.scrolled .logo-img {
-  height: 42px;
+  height: 46px;
 }
 
 .logo-text {
@@ -251,7 +251,7 @@ a {
 .logo-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 22px;
+  font-size: 24px;
   color: var(--color-text);
   line-height: 1;
   letter-spacing: 0.03em;
@@ -259,17 +259,17 @@ a {
 
 .logo-subtitle {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 11px;
   color: var(--color-secondary);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 3px;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .logo-arabic {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--color-text-muted);
   line-height: 1.2;
   margin-top: 2px;
