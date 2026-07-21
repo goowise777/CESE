@@ -1,0 +1,10 @@
+/* ==========================================================================
+   EMAILJS CONFIGURATION TEMPLATE
+   Copy this file to config.js and fill in your EmailJS credentials.
+   ========================================================================== */
+
+window.EMAILJS_CONFIG = {
+  PUBLIC_KEY: "YOUR_PUBLIC_KEY",
+  SERVICE_ID: "YOUR_SERVICE_ID",
+  TEMPLATE_ID: "YOUR_TEMPLATE_ID"
+};
