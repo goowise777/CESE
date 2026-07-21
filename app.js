@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   en: {
     logo_title: "CESE",
-    logo_subtitle: "Establishment",
+    logo_subtitle: "Commercial Electricity Supply Establishment",
     logo_arabic: "مؤسسة توريد الكهرباء التجارية",
     nav_home: "Home",
     nav_about: "About Us",
