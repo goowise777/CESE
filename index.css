@@ -261,10 +261,11 @@ a {
   font-family: var(--font-mono);
   font-size: 9px;
   color: var(--color-secondary);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 3px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .logo-arabic {
