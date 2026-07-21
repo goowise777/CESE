@@ -605,9 +605,6 @@ function validateEmail(email) {
   var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(String(email).toLowerCase());
 }
-\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
 
 /* ==========================================================================
    6. PREMIUM CARD MOUSE TRACKING GLOW
