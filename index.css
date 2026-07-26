@@ -1475,6 +1475,10 @@ a {
   line-height: 1.4;
 }
 
+.detail-val a:hover {
+  color: var(--color-secondary);
+}
+
 /* Coordinate Map SVG design */
 .technical-map {
   background-color: var(--color-surface);
