@@ -2204,3 +2204,81 @@ a {
     object-fit: cover;
   }
 }
+
+/* ==========================================================================
+   ANTI-INSPECTION & DEVTOOLS LOCKOUT STYLING
+   ========================================================================== */
+
+#devtools-lockout-banner {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 18, 32, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 999999999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.devtools-lockout-card {
+  background: #121B2E;
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6), 0 0 30px rgba(245, 166, 35, 0.15);
+  border-radius: 12px;
+  padding: 40px 32px;
+  max-width: 440px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: devtoolsFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes devtoolsFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.devtools-lockout-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(245, 166, 35, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(245, 166, 35, 0.25);
+}
+
+.devtools-lockout-title {
+  font-family: var(--font-display, sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #E8ECF1;
+  margin: 0;
+}
+
+.devtools-lockout-text {
+  font-family: var(--font-body, sans-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7C8AA0;
+  margin: 0;
+}
+
+body.devtools-restricted > *:not(#devtools-lockout-banner) {
+  filter: blur(10px) !important;
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+/* Prevent image dragging */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}

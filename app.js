@@ -2,19 +2,103 @@
    CESE B2B WEBSITE - APPLICATION LOGIC
    ========================================================================== */
 
-// Disable right-click context menu
-document.addEventListener('contextmenu', (e) => e.preventDefault());
+// ==========================================================================
+// ANTI-INSPECTION & DEVTOOLS LOCKOUT ENGINE
+// ==========================================================================
+(function () {
+  // 1. Disable right-click context menu
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
 
-// Disable common inspect / view source shortcuts (F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S)
-document.addEventListener('keydown', (e) => {
-  if (
-    e.key === 'F12' ||
-    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
-    (e.ctrlKey && ['u', 's'].includes(e.key.toLowerCase()))
-  ) {
-    e.preventDefault();
+  // 2. Disable DevTools / View Source / Save / Print keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+Shift+I / J / C / K (Windows/Linux)
+    if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C', 'K'].includes(e.key.toUpperCase())) {
+      e.preventDefault();
+      return false;
+    }
+    // Cmd+Opt+I / J / C / K (macOS)
+    if (e.altKey && e.metaKey && ['I', 'J', 'C', 'K'].includes(e.key.toUpperCase())) {
+      e.preventDefault();
+      return false;
+    }
+    // Ctrl+U (View Source), Ctrl+S (Save Page), Ctrl+P (Print)
+    if ((e.ctrlKey || e.metaKey) && ['u', 's', 'p'].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // 3. Prevent dragging images to save/steal
+  document.addEventListener('dragstart', (e) => {
+    if (e.target && e.target.nodeName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  });
+
+  // 4. Silence console output to hinder inspection
+  try {
+    const noop = () => {};
+    ['log', 'debug', 'info', 'warn', 'error', 'table', 'dir', 'trace'].forEach((m) => {
+      console[m] = noop;
+    });
+  } catch (e) {}
+
+  // 5. Anti-Debugging freeze trap (Active whenever DevTools is opened via 3-dots, menu, or shortcut)
+  function getOrCreateBanner() {
+    let banner = document.getElementById('devtools-lockout-banner');
+    if (!banner && document.body) {
+      banner = document.createElement('div');
+      banner.id = 'devtools-lockout-banner';
+      banner.innerHTML = `
+        <div class="devtools-lockout-card">
+          <div class="devtools-lockout-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3 class="devtools-lockout-title">Inspection Restricted</h3>
+          <p class="devtools-lockout-text">Developer tools and source inspection are restricted for security reasons. Please close developer tools to resume normal browsing.</p>
+        </div>
+      `;
+      document.body.appendChild(banner);
+    }
+    return banner;
   }
-});
+
+  function runAntiDebug() {
+    const t0 = performance.now();
+    try {
+      (function () {
+        return false;
+      }['constructor']('debugger')['call']());
+    } catch (e) {}
+    const t1 = performance.now();
+
+    // When DevTools is open, execution pauses at the debugger statement, creating a detectable delay (> 100ms)
+    const isDevToolsOpen = (t1 - t0) > 100;
+    const banner = getOrCreateBanner();
+
+    if (isDevToolsOpen) {
+      if (banner) banner.style.display = 'flex';
+      document.body.classList.add('devtools-restricted');
+      try { console.clear(); } catch (e) {}
+    } else {
+      if (banner) banner.style.display = 'none';
+      document.body.classList.remove('devtools-restricted');
+    }
+  }
+
+  // Check periodically every 250ms
+  setInterval(runAntiDebug, 250);
+})();
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
