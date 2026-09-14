@@ -2,6 +2,20 @@
    CESE B2B WEBSITE - APPLICATION LOGIC
    ========================================================================== */
 
+// Disable right-click context menu
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+// Disable common inspect / view source shortcuts (F12, Ctrl+Shift+I/J/C, Ctrl+U, Ctrl+S)
+document.addEventListener('keydown', (e) => {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && ['u', 's'].includes(e.key.toLowerCase()))
+  ) {
+    e.preventDefault();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   initLanguage();
   initStickyHeader();
