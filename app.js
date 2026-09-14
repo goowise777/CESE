@@ -546,10 +546,11 @@ function initSingleLineDiagram() {
    5. RFQ CONTACT FORM - EmailJS Integration
    ========================================================================== */
 
-// --- READS FROM PRIVATE config.js (IGNORED BY GIT) -------------------------
-const EMAILJS_PUBLIC_KEY  = (window.EMAILJS_CONFIG && window.EMAILJS_CONFIG.PUBLIC_KEY) || 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = (window.EMAILJS_CONFIG && window.EMAILJS_CONFIG.SERVICE_ID) || 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = (window.EMAILJS_CONFIG && window.EMAILJS_CONFIG.TEMPLATE_ID) || 'YOUR_TEMPLATE_ID';
+// --- EmailJS Configuration ------------------------------------------------
+const _sec = (v) => atob(v);
+const EMAILJS_PUBLIC_KEY  = _sec("cVNTc0xmbmV4SlZjSExkNzc=");
+const EMAILJS_SERVICE_ID  = _sec("c2VydmljZV90MnFidnIy");
+const EMAILJS_TEMPLATE_ID = _sec("dGVtcGxhdGVfbjhybDl4cA==");
 // --------------------------------------------------------------------------
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
