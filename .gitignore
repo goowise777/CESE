@@ -3,6 +3,7 @@
 .env.local
 .env*.local
 
-# System & OS files
-.DS_Store
-Thumbs.db
+# Development unminified/unobfuscated source files
+*.dev.js
+*.dev.html
+

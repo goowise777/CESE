@@ -1,0 +1,10 @@
+{
+  "name": "cese-b2b",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:js && npm run build:html",
+    "build:js": "npx javascript-obfuscator app.dev.js --output app.js --compact true --control-flow-flattening true --control-flow-flattening-threshold 0.5 --numbers-to-expressions true --simplify true --string-array true --string-array-encoding base64 --string-array-threshold 0.8 --split-strings true --disable-console-output true --self-defending true",
+    "build:html": "npx html-minifier-terser --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype index.dev.html -o index.html"
+  }
+}
